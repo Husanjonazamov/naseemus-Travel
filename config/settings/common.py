@@ -156,15 +156,6 @@ MODELTRANSLATION_LANGUAGES = ("uz", "ru", "en")
 MODELTRANSLATION_DEFAULT_LANGUAGE = "uz"
 
 
-PAYME_ID=env("PAYME_ID")
-PAYME_KEY=env("PAYME_KEY")
-PAYME_ACCOUNT_FIELD = "order_id"
-PAYME_AMOUNT_FIELD = "price"
-PAYME_ACCOUNT_MODEL = "core.apps.api.models.posting.PostingTypeModel"
-PAYME_ONE_TIME_PAYMENT = True
-
-
-
 JST_LANGUAGES = [
     {
         "code": "uz",

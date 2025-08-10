@@ -12,35 +12,20 @@ PAGES = [
             }
         ],
     },
+    
     {
-        "title": _("Foydalanuvchilar"),
+        "title": _("Turlar"),
         "separator": True,
         "items": [
             {
-                "title": _("Foydalanuvchilar"),
-                "icon": "group",  # MSO: group
-                "link": reverse_lazy("admin:accounts_user_changelist"),
-            },
-        ],
-    },
-    {
-        "title": _("E'lonlar"),
-        "separator": True,
-        "items": [
-            {
-                "title": _("Elonlar"),
+                "title": _("Turlar"),
                 "icon": "campaign",
-                "link": reverse_lazy("admin:api_listingmodel_changelist"),
+                "link": reverse_lazy("admin:api_tourmodel_changelist"),
             },
             {
-                "title": _("Elon Tarifi"),
+                "title": _("Blog"),
                 "icon": "description",  # MSO: description (yoki 'article')
-                "link": reverse_lazy("admin:api_postingtypemodel_changelist"),
-            },
-            {
-                "title": _("Avzalliklar"),
-                "icon": "star",  # MSO: star (yoki 'grade', 'local_fire_department')
-                "link": reverse_lazy("admin:api_featuremodel_changelist"),
+                "link": reverse_lazy("admin:api_blogmodel_changelist"),
             },
         ],
     },

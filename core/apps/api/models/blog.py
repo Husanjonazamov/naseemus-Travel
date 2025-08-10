@@ -4,11 +4,12 @@ from django_core.models import AbstractBaseModel
 
 
 class BlogModel(AbstractBaseModel):
-
-    name = models.CharField(verbose_name=_("name"), max_length=255)
+    title = models.CharField(verbose_name=_("Nomi"), max_length=255)
+    description = models.TextField(verbose_name=_("Tavsif"), blank=True, null=True)
+    image = models.ImageField(verbose_name=_("Rasm"), upload_to="blog/")
 
     def __str__(self):
-        return str(self.pk)
+        return self.title
 
     @classmethod
     def _create_fake(self):
