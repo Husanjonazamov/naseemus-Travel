@@ -1,1 +1,0 @@
-from .payme import *  # noqa

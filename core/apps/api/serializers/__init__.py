@@ -1,4 +1,2 @@
-from .category import *  # noqa
-from .feature import *  # noqa
-from .listing import *  # noqa
-from .posting import *  # noqa
+from .blog import *  # noqa
+from .tour import *  # noqa
