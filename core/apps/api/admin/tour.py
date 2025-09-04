@@ -1,9 +1,16 @@
 from django.contrib import admin
 from django.utils.html import format_html
-from unfold.admin import ModelAdmin
+from unfold.admin import ModelAdmin, TabularInline
 from modeltranslation.admin import TabbedTranslationAdmin
 
-from core.apps.api.models import TourModel
+from core.apps.api.models import TourModel, TourimageModel
+
+
+class TourImageInlines(TabularInline):
+    model = TourimageModel
+    extra = 2
+
+
 
 
 @admin.register(TourModel)
@@ -38,3 +45,5 @@ class TourAdmin(ModelAdmin, TabbedTranslationAdmin):
     def price_display(self, obj):
         return f"${obj.price:,.2f}"
     price_display.short_description = "Price"
+    
+    inlines = [TourImageInlines]

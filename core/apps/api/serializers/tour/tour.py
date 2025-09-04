@@ -8,7 +8,13 @@ class BaseTourSerializer(serializers.ModelSerializer):
         model = TourModel
         fields = [
             "id",
-            "name",
+            "title",
+            "description",
+            "price",
+            "image",
+            "date",
+            "is_popular",
+            "is_new"
         ]
 
 
@@ -24,5 +30,5 @@ class CreateTourSerializer(BaseTourSerializer):
     class Meta(BaseTourSerializer.Meta):
         fields = [
             "id",
-            "name",
+            "title",
         ]

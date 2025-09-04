@@ -5,4 +5,7 @@ from core.apps.api.models import BlogModel
 
 @register(BlogModel)
 class BlogTranslation(TranslationOptions):
-    fields = []
+    fields = [
+        "title",
+        "description"
+    ]

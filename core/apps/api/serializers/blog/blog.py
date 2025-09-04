@@ -8,7 +8,9 @@ class BaseBlogSerializer(serializers.ModelSerializer):
         model = BlogModel
         fields = [
             "id",
-            "name",
+            "title",
+            "description",
+            "image"
         ]
 
 

@@ -2,11 +2,13 @@ from django.contrib import admin
 from django.utils.html import format_html
 from unfold.admin import ModelAdmin
 
+from modeltranslation.admin import TabbedTranslationAdmin
+
 from core.apps.api.models import BlogModel
 
 
 @admin.register(BlogModel)
-class BlogAdmin(ModelAdmin):
+class BlogAdmin(ModelAdmin, TabbedTranslationAdmin):
     list_display = (
         "id",
         "title",

@@ -5,4 +5,7 @@ from core.apps.api.models import TourModel
 
 @register(TourModel)
 class TourTranslation(TranslationOptions):
-    fields = []
+    fields = [
+        "title",
+        "description",
+    ]

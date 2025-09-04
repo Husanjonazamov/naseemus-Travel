@@ -4,11 +4,11 @@ from django_core.models import AbstractBaseModel
 
 
 class TourimageModel(AbstractBaseModel):
-
-    name = models.CharField(verbose_name=_("name"), max_length=255)
+    tour = models.ForeignKey("api.TourModel", on_delete=models.CASCADE, blank=True, null=True, related_name="images")
+    image = models.ImageField(upload_to="image/", blank=True, null=True)
 
     def __str__(self):
-        return str(self.pk)
+        return str(self.tour.title)
 
     @classmethod
     def _create_fake(self):
