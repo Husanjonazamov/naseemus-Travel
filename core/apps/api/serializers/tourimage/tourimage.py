@@ -4,11 +4,12 @@ from core.apps.api.models import TourimageModel
 
 
 class BaseTourimageSerializer(serializers.ModelSerializer):
+    
     class Meta:
         model = TourimageModel
         fields = [
             "id",
-            "name",
+            "image"
         ]
 
 
