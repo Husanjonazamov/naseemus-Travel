@@ -26,5 +26,7 @@ class CreateBlogSerializer(BaseBlogSerializer):
     class Meta(BaseBlogSerializer.Meta):
         fields = [
             "id",
-            "name",
+             "title",
+            "description",
+            "image"
         ]

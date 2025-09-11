@@ -36,9 +36,14 @@ class RetrieveTourSerializer(BaseTourSerializer):
     class Meta(BaseTourSerializer.Meta): ...
 
 
-class CreateTourSerializer(BaseTourSerializer):
-    class Meta(BaseTourSerializer.Meta):
+class CreateTourSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TourModel
         fields = [
-            "id",
             "title",
+            "description",
+            "price",
+            "date",
+            "is_popular",
+            "image",
         ]

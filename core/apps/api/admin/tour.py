@@ -9,9 +9,7 @@ from core.apps.api.models import TourModel, TourimageModel
 class TourImageInlines(TabularInline):
     model = TourimageModel
     extra = 2
-
-
-
+    
 
 @admin.register(TourModel)
 class TourAdmin(ModelAdmin, TabbedTranslationAdmin):

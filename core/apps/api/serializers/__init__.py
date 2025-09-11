@@ -1,3 +1,6 @@
+from .banner import *  # noqa
 from .blog import *  # noqa
+from .holidayItem import *  # noqa
+from .holidays import *  # noqa
 from .tour import *  # noqa
 from .tourimage import *  # noqa

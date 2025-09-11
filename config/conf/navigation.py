@@ -18,6 +18,11 @@ PAGES = [
         "separator": True,
         "items": [
             {
+                "title": _("Banner"),
+                "icon": "campaign",
+                "link": reverse_lazy("admin:api_bannermodel_changelist"),
+            },
+            {
                 "title": _("Turlar"),
                 "icon": "campaign",
                 "link": reverse_lazy("admin:api_tourmodel_changelist"),
