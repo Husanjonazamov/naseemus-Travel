@@ -13,8 +13,8 @@ class BlogView(BaseViewSetMixin, ModelViewSet):
     serializer_class = ListBlogSerializer
     permission_classes = [AllowAny]
     
-    lookup_field = 'title'
-    lookup_url_kwarg = 'title'  # url parametri nomi
+    lookup_field = 'slug'
+    lookup_url_kwarg = 'slug'  # url parametri nomi
 
     action_permission_classes = {}
     action_serializer_class = {

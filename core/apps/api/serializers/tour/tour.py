@@ -1,24 +1,29 @@
 from rest_framework import serializers
 
 from core.apps.api.models import TourModel
+from core.apps.api.serializers.category import  BaseCategorySerializer
 
 
 
 class BaseTourSerializer(serializers.ModelSerializer):
     images = serializers.SerializerMethodField()
+    category = BaseCategorySerializer()
     
     class Meta:
         model = TourModel
         fields = [
             "id",
             "title",
+            "slug",
             "description",
             "price",
             "image",
             "date",
+            "category",
             "is_popular",
             "is_new",
-            "images"
+            "images",
+            "maps",
         ]
         
     def get_images(self, obj):
@@ -41,6 +46,7 @@ class CreateTourSerializer(serializers.ModelSerializer):
         model = TourModel
         fields = [
             "title",
+            "slug",
             "description",
             "price",
             "date",

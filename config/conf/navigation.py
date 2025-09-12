@@ -22,6 +22,11 @@ PAGES = [
                 "icon": "campaign",
                 "link": reverse_lazy("admin:api_bannermodel_changelist"),
             },
+             {
+                "title": _("Kategorya"),
+                "icon": "campaign",
+                "link": reverse_lazy("admin:api_categorymodel_changelist"),
+            },
             {
                 "title": _("Turlar"),
                 "icon": "campaign",

@@ -5,6 +5,8 @@ from django_core.models import AbstractBaseModel
 
 class BlogModel(AbstractBaseModel):
     title = models.CharField(verbose_name=_("Nomi"), max_length=255)
+    slug = models.SlugField(verbose_name=_("Slug"), max_length=255, unique=True, blank=True)
+    
     description = models.TextField(verbose_name=_("Tavsif"), blank=True, null=True)
     image = models.ImageField(verbose_name=_("Rasm"), upload_to="blog/")
 

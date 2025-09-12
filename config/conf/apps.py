@@ -14,8 +14,7 @@ APPS = [
     "core.apps.api"
     
 ]
-
-if env.str("PROJECT_ENV") == "debug":
+if env.bool("SILK_ENEBLED", False):
     APPS += [
         "silk",
     ]

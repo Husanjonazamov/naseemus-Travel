@@ -13,7 +13,6 @@ class BlogAdmin(ModelAdmin, TabbedTranslationAdmin):
         "id",
         "title",
         "display_image",  # custom method nomi
-        "description"
     )
 
     def display_image(self, obj):
