@@ -3,5 +3,6 @@ from .test_blog import *  # noqa
 from .test_category import *  # noqa
 from .test_holidayItem import *  # noqa
 from .test_holidays import *  # noqa
+from .test_order import *  # noqa
 from .test_tour import *  # noqa
 from .test_tourimage import *  # noqa

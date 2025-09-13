@@ -8,6 +8,8 @@ from core.apps.api.serializers.category import  BaseCategorySerializer
 class BaseTourSerializer(serializers.ModelSerializer):
     images = serializers.SerializerMethodField()
     category = BaseCategorySerializer()
+    image_url = serializers.SerializerMethodField()
+
     
     class Meta:
         model = TourModel
@@ -25,6 +27,12 @@ class BaseTourSerializer(serializers.ModelSerializer):
             "images",
             "maps",
         ]
+        
+    def get_image_url(self, obj):
+        request = self.context.get("request")
+        if request:
+            return request.build_absolute_uri(obj.image.url)
+        return obj.image.url  
         
     def get_images(self, obj):
         from core.apps.api.serializers.tourimage import BaseTourimageSerializer
