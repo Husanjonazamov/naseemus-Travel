@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from django.utils.text import slugify
 from django_core.models import AbstractBaseModel
 
 
@@ -18,10 +19,23 @@ class TourModel(AbstractBaseModel):
     def __str__(self):
         return self.title
 
+    def save(self, *args, **kwargs):
+        if not self.slug: 
+            base_slug = slugify(self.title)
+            slug = base_slug
+            counter = 1
+            while TourModel.objects.filter(slug=slug).exclude(pk=self.pk).exists():
+                slug = f"{base_slug}-{counter}"
+                counter += 1
+            self.slug = slug
+        super().save(*args, **kwargs)
+
     @classmethod
-    def _create_fake(self):
-        return self.objects.create(
-            name="mock",
+    def _create_fake(cls):
+        return cls.objects.create(
+            title="mock",
+            price=100,
+            image="tour/mock.jpg",
         )
 
     class Meta:

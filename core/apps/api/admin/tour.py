@@ -23,6 +23,8 @@ class TourAdmin(ModelAdmin, TabbedTranslationAdmin):
         "is_popular",
         "is_new"
     )
+    prepopulated_fields = {"slug": ("title",)}
+
     list_display_links = ("id", "title")
     search_fields = ("title", "description")
     list_filter = ("is_popular", "is_new", "date")
