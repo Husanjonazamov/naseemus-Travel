@@ -37,7 +37,7 @@ class TourView(BaseViewSetMixin, ModelViewSet):
         qs = self.queryset
 
         if search_value:
-            if search_value.isdigit():  # narx bo‘yicha
+            if search_value.isdigit():  
                 qs = qs.filter(price=search_value)
             else:  # title bo‘yicha (katta-kichikni e’tiborga olmaydi)
                 qs = qs.annotate(lower_title=Lower("title")).filter(

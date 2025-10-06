@@ -3,6 +3,8 @@ from .blog import *  # noqa
 from .category import *  # noqa
 from .holidayItem import *  # noqa
 from .holidays import *  # noqa
+from .hotel import *  # noqa
 from .order import *  # noqa
+from .sanatory import *  # noqa
 from .tour import *  # noqa
 from .tourimage import *  # noqa

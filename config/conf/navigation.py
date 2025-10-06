@@ -13,30 +13,36 @@ PAGES = [
         ],
     },
     
-    {
+   {
         "title": _("Turlar"),
         "separator": True,
         "items": [
             {
                 "title": _("Banner"),
-                "icon": "campaign",
+                "icon": "image",  # bannerga mos - reklama/rasm
                 "link": reverse_lazy("admin:api_bannermodel_changelist"),
             },
-             {
-                "title": _("Kategorya"),
-                "icon": "campaign",
-                "link": reverse_lazy("admin:api_categorymodel_changelist"),
+            {
+                "title": _("Hotel"),
+                "icon": "hotel",  # hotel uchun to‘g‘ridan-to‘g‘ri icon bor
+                "link": reverse_lazy("admin:api_hotelmodel_changelist"),
+            },
+            {
+                "title": _("Sanatorya"),
+                "icon": "spa",  # hotel uchun to‘g‘ridan-to‘g‘ri icon bor
+                "link": reverse_lazy("admin:api_sanatorymodel_changelist"),
             },
             {
                 "title": _("Turlar"),
-                "icon": "campaign",
+                "icon": "travel_explore",  # sayohat uchun mos icon
                 "link": reverse_lazy("admin:api_tourmodel_changelist"),
             },
             {
                 "title": _("Blog"),
-                "icon": "description",  # MSO: description (yoki 'article')
+                "icon": "article",  # blog/matn uchun article icon mos
                 "link": reverse_lazy("admin:api_blogmodel_changelist"),
             },
         ],
-    },
+    }
+
 ]

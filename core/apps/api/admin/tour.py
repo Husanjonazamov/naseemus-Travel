@@ -6,6 +6,9 @@ from modeltranslation.admin import TabbedTranslationAdmin
 from core.apps.api.models import TourModel, TourimageModel
 
 
+
+
+
 class TourImageInlines(TabularInline):
     model = TourimageModel
     extra = 2
