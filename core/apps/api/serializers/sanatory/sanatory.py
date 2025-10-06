@@ -1,14 +1,21 @@
 from rest_framework import serializers
 
 from core.apps.api.models import SanatoryModel
+from core.apps.api.serializers.sanatory.video import ListVideoSerializer
 
 
 class BaseSanatorySerializer(serializers.ModelSerializer):
+    videos = ListVideoSerializer(many=True, read_only=True)
+    
     class Meta:
         model = SanatoryModel
         fields = [
             "id",
-            "name",
+            "title",
+            "price",
+            "description",
+            "image",
+            "videos",
         ]
 
 
@@ -24,5 +31,9 @@ class CreateSanatorySerializer(BaseSanatorySerializer):
     class Meta(BaseSanatorySerializer.Meta):
         fields = [
             "id",
-            "name",
+            "title",
+            "price",
+            "description",
+            "image",
+            "videos",
         ]

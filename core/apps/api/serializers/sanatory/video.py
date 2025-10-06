@@ -8,7 +8,7 @@ class BaseVideoSerializer(serializers.ModelSerializer):
         model = VideoModel
         fields = [
             "id",
-            "name",
+            "video",
         ]
 
 
@@ -24,5 +24,5 @@ class CreateVideoSerializer(BaseVideoSerializer):
     class Meta(BaseVideoSerializer.Meta):
         fields = [
             "id",
-            "name",
+            "video",
         ]

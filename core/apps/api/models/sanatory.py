@@ -27,7 +27,7 @@ class SanatoryModel(AbstractBaseModel):
 
 
 class VideoModel(AbstractBaseModel):
-    sanatory = models.ForeignKey(SanatoryModel, on_delete=models.CASCADE)
+    sanatory = models.ForeignKey(SanatoryModel, on_delete=models.CASCADE, related_name="videos")
     video = models.FileField(verbose_name=_("Video"), upload_to="video/")
 
     def __str__(self):
