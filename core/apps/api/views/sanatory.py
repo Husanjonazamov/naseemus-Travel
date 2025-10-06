@@ -19,6 +19,9 @@ class SanatoryView(BaseViewSetMixin, ModelViewSet):
     queryset = SanatoryModel.objects.all()
     serializer_class = ListSanatorySerializer
     permission_classes = [AllowAny]
+    
+    lookup_field = 'slug'
+    lookup_url_kwarg = 'slug' 
 
     action_permission_classes = {}
     action_serializer_class = {

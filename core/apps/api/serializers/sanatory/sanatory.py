@@ -12,6 +12,7 @@ class BaseSanatorySerializer(serializers.ModelSerializer):
         fields = [
             "id",
             "title",
+            "slug",
             "price",
             "description",
             "image",

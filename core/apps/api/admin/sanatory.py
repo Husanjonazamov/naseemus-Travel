@@ -31,6 +31,7 @@ class VideoInline(TabularInline):
 class SanatoryAdmin(ModelAdmin, TabbedTranslationAdmin):
     list_display = ("id", "__str__", "image_preview")
     inlines = [VideoInline]
+    prepopulated_fields = {"slug": ("title",)}  # title asosida slug avto hosil bo‘ladi
 
     def image_preview(self, obj):
         if obj.image:
