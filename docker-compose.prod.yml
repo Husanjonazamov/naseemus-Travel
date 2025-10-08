@@ -32,7 +32,7 @@ services:
     restart: always
     environment:
       - PYTHONPYCACHEPREFIX=/var/cache/pycache
-      - SCRIPT=${SCRIPT:-entrypoint.sh}
+      - SCRIPT=${SCRIPT:-entrypoint-server.sh}
     volumes:
       - media:/code/resources/media/
       - static:/code/resources/staticfiles/

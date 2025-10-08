@@ -8,6 +8,7 @@ from django.utils.text import slugify
 class SanatoryModel(AbstractBaseModel):
     title = models.CharField(verbose_name=_("Nomi"), max_length=255)
     slug = models.SlugField(verbose_name=_("Slug"), max_length=255, unique=True, blank=True)
+    date = models.IntegerField(verbose_name=_("Kun"), blank=True, null=True)
     price = models.DecimalField(verbose_name=_("Narxi"), max_digits=10, decimal_places=2)
     description = models.TextField(verbose_name=_("Tavsif"))
     image = models.ImageField(verbose_name=_("Rasm"), upload_to="sanatory-images/")

@@ -13,6 +13,7 @@ class BaseSanatorySerializer(serializers.ModelSerializer):
             "id",
             "title",
             "slug",
+            "date",
             "price",
             "description",
             "image",
