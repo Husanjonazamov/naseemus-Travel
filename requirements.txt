@@ -84,3 +84,4 @@ vine==5.1.0
 wcwidth==0.2.13
 zipp==3.21.0
 telebot
+gunicorn
