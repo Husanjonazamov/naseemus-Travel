@@ -12,4 +12,6 @@ gunicorn config.wsgi:application -b 0.0.0.0:8000 --workers $(($(nproc) * 2 + 1))
 
 
 
+exit $?
+
 

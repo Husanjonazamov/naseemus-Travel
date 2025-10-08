@@ -17,7 +17,7 @@ services:
     container_name: test_web
     environment:
       - PYTHONPYCACHEPREFIX=/var/cache/pycache
-      - SCRIPT=${SCRIPT:-entrypoint-server.sh}
+      - SCRIPT=${SCRIPT:-entrypoint.sh}
     volumes:
       - pycache:/var/cache/pycache
     depends_on:

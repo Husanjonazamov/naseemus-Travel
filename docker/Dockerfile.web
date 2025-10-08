@@ -1,6 +1,6 @@
 FROM jscorptech/django:v0.5
 
-ARG SCRIPT="entrypoint-server.sh"
+ARG SCRIPT="entrypoint.sh"
 ENV SCRIPT=$SCRIPT
 
 

@@ -10,7 +10,7 @@
       "runner": "wsgi",
       "celery": "no",
       "cache": "no",
-      "script": "entrypoint-server.sh",
+      "script": "entrypoint.sh",
       "key": "key",
       "port": "8021",
       "phone": "998888112309",
