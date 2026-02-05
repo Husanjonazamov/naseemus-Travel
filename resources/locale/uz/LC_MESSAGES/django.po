@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-15 16:40+0500\n"
+"POT-Creation-Date: 2026-02-05 14:11+0500\n"
 "PO-Revision-Date: 2024-02-10 22:46+0500\n"
 "Last-Translator:   <admin@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,37 +19,349 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
-#: config/settings/common.py:148
+#: config/conf/navigation.py:9
+#, fuzzy
+#| msgid "Home"
+msgid "Home page"
+msgstr "Bosh sahifa"
+
+#: config/conf/navigation.py:17 config/conf/navigation.py:36
+msgid "Turlar"
+msgstr ""
+
+#: config/conf/navigation.py:21
+msgid "Banner"
+msgstr ""
+
+#: config/conf/navigation.py:26
+msgid "Hotel"
+msgstr ""
+
+#: config/conf/navigation.py:31
+msgid "Sanatorya"
+msgstr ""
+
+#: config/conf/navigation.py:41
+msgid "Blog"
+msgstr ""
+
+#: config/conf/unfold.py:10
+msgid "Development"
+msgstr ""
+
+#: config/conf/unfold.py:12
+msgid "Production"
+msgstr ""
+
+#: config/settings/common.py:134
 msgid "Russia"
 msgstr ""
 
-#: config/settings/common.py:149
+#: config/settings/common.py:135
 msgid "English"
 msgstr ""
 
-#: config/settings/common.py:150
+#: config/settings/common.py:136
 msgid "Uzbek"
 msgstr ""
 
-#: core/http/admin/index.py:20
-msgid "Custom Field"
+#: core/apps/accounts/admin/user.py:21
+msgid "Personal info"
 msgstr ""
 
-#: core/http/tasks/index.py:13
+#: core/apps/accounts/admin/user.py:23
+msgid "Permissions"
+msgstr ""
+
+#: core/apps/accounts/admin/user.py:35
+msgid "Important dates"
+msgstr ""
+
+#: core/apps/accounts/choices/user.py:10
+msgid "Superuser"
+msgstr ""
+
+#: core/apps/accounts/choices/user.py:11
+msgid "Admin"
+msgstr ""
+
+#: core/apps/accounts/choices/user.py:12
+msgid "User"
+msgstr ""
+
+#: core/apps/accounts/models/holidayItem.py:8
+msgid "name"
+msgstr ""
+
+#: core/apps/accounts/models/holidayItem.py:21
+#: core/apps/api/models/holidayItem.py:20
+msgid "HolidayitemModel"
+msgstr ""
+
+#: core/apps/accounts/models/holidayItem.py:22
+#: core/apps/api/models/holidayItem.py:21
+msgid "HolidayitemModels"
+msgstr ""
+
+#: core/apps/accounts/serializers/auth.py:18
+msgid "Phone number already registered."
+msgstr ""
+
+#: core/apps/accounts/serializers/auth.py:45
+#: core/apps/accounts/serializers/auth.py:56
+msgid "User does not exist"
+msgstr ""
+
+#: core/apps/accounts/tasks/sms.py:21
 #, python-format
 msgid "Sizning Tasdiqlash ko'dingiz: %(code)s"
 msgstr ""
 
-#: resources/templates/user/home.html:18
+#: core/apps/accounts/views/auth.py:60 core/apps/accounts/views/auth.py:92
+#: core/apps/accounts/views/auth.py:116
+#, python-format
+msgid "Sms %(phone)s raqamiga yuborildi"
+msgstr ""
+
+#: core/apps/accounts/views/auth.py:76
+msgid "Tasdiqlash ko'di qabul qilindi"
+msgstr ""
+
+#: core/apps/accounts/views/auth.py:153
+msgid "Invalid token"
+msgstr ""
+
+#: core/apps/accounts/views/auth.py:157
+msgid "password updated"
+msgstr ""
+
+#: core/apps/accounts/views/auth.py:182
+msgid "Malumotlar yangilandi"
+msgstr ""
+
+#: core/apps/accounts/views/auth.py:209
+msgid "invalida password"
+msgstr ""
+
+#: core/apps/api/models/banner.py:7 core/apps/api/models/blog.py:7
+#: core/apps/api/models/category.py:8 core/apps/api/models/holidayItem.py:7
+#: core/apps/api/models/holidays.py:7 core/apps/api/models/hotel.py:7
+#: core/apps/api/models/sanatory.py:9 core/apps/api/models/tour.py:8
+msgid "Nomi"
+msgstr ""
+
+#: core/apps/api/models/banner.py:22
+msgid "BannerModel"
+msgstr ""
+
+#: core/apps/api/models/banner.py:23
+msgid "BannerModels"
+msgstr ""
+
+#: core/apps/api/models/blog.py:8 core/apps/api/models/sanatory.py:10
+#: core/apps/api/models/tour.py:9
+msgid "Slug"
+msgstr ""
+
+#: core/apps/api/models/blog.py:10 core/apps/api/models/holidays.py:8
+#: core/apps/api/models/sanatory.py:13 core/apps/api/models/tour.py:10
+msgid "Tavsif"
+msgstr ""
+
+#: core/apps/api/models/blog.py:11 core/apps/api/models/sanatory.py:14
+msgid "Rasm"
+msgstr ""
+
+#: core/apps/api/models/blog.py:24
+msgid "BlogModel"
+msgstr ""
+
+#: core/apps/api/models/blog.py:25
+msgid "BlogModels"
+msgstr ""
+
+#: core/apps/api/models/category.py:21
+msgid "CategoryModel"
+msgstr ""
+
+#: core/apps/api/models/category.py:22
+msgid "CategoryModels"
+msgstr ""
+
+#: core/apps/api/models/holidays.py:23
+msgid "HolidaysModel"
+msgstr ""
+
+#: core/apps/api/models/holidays.py:24
+msgid "HolidaysModels"
+msgstr ""
+
+#: core/apps/api/models/holidays.py:42
+msgid "HolidaysimageModel"
+msgstr ""
+
+#: core/apps/api/models/holidays.py:43
+msgid "HolidaysimageModels"
+msgstr ""
+
+#: core/apps/api/models/hotel.py:22
+msgid "HotelModel"
+msgstr ""
+
+#: core/apps/api/models/hotel.py:23
+msgid "HotelModels"
+msgstr ""
+
+#: core/apps/api/models/order.py:7
+msgid "Ism"
+msgstr ""
+
+#: core/apps/api/models/order.py:9
+msgid "Telefon raqam"
+msgstr ""
+
+#: core/apps/api/models/order.py:10
+msgid "Soni"
+msgstr ""
+
+#: core/apps/api/models/order.py:11
+msgid "kun"
+msgstr ""
+
+#: core/apps/api/models/order.py:12
+msgid "Kamment"
+msgstr ""
+
+#: core/apps/api/models/order.py:26
+msgid "OrderModel"
+msgstr ""
+
+#: core/apps/api/models/order.py:27
+msgid "OrderModels"
+msgstr ""
+
+#: core/apps/api/models/sanatory.py:11 core/apps/api/models/tour.py:15
+msgid "Kun"
+msgstr ""
+
+#: core/apps/api/models/sanatory.py:12 core/apps/api/models/tour.py:12
+msgid "Narxi"
+msgstr ""
+
+#: core/apps/api/models/sanatory.py:40
+msgid "SanatoryModel"
+msgstr ""
+
+#: core/apps/api/models/sanatory.py:41
+msgid "SanatoryModels"
+msgstr ""
+
+#: core/apps/api/models/sanatory.py:48
+msgid "Video"
+msgstr ""
+
+#: core/apps/api/models/sanatory.py:61
+msgid "VideoModel"
+msgstr ""
+
+#: core/apps/api/models/sanatory.py:62
+msgid "VideoModels"
+msgstr ""
+
+#: core/apps/api/models/tour.py:13
+msgid "Image"
+msgstr ""
+
+#: core/apps/api/models/tour.py:14
+msgid "Xarita"
+msgstr ""
+
+#: core/apps/api/models/tour.py:16
+msgid "Mashhurmi ?"
+msgstr ""
+
+#: core/apps/api/models/tour.py:17
+msgid "Yangi ?"
+msgstr ""
+
+#: core/apps/api/models/tour.py:20
+msgid "Sanatoriyalar"
+msgstr ""
+
+#: core/apps/api/models/tour.py:49
+msgid "TourModel"
+msgstr ""
+
+#: core/apps/api/models/tour.py:50
+msgid "TourModels"
+msgstr ""
+
+#: core/apps/api/models/tourimage.py:22
+msgid "TourimageModel"
+msgstr ""
+
+#: core/apps/api/models/tourimage.py:23
+msgid "TourimageModels"
+msgstr ""
+
+#: core/apps/shared/models/settings.py:8 core/apps/shared/models/settings.py:22
+msgid "key"
+msgstr ""
+
+#: core/apps/shared/models/settings.py:9
+msgid "is public"
+msgstr ""
+
+#: core/apps/shared/models/settings.py:10
+msgid "description"
+msgstr ""
+
+#: core/apps/shared/models/settings.py:14
+#: core/apps/shared/models/settings.py:15
+msgid "Settings"
+msgstr ""
+
+#: core/apps/shared/models/settings.py:20
+msgid "settings"
+msgstr ""
+
+#: core/apps/shared/models/settings.py:24
+#: core/apps/shared/models/settings.py:25
+msgid "value"
+msgstr ""
+
+#: core/apps/shared/models/settings.py:30
+#: core/apps/shared/models/settings.py:31
+msgid "Options"
+msgstr ""
+
+#: core/apps/shared/utils/settings.py:16
+msgid "USD kursi kiritilmagan iltimos adminga murojat qiling"
+msgstr ""
+
+#: core/services/user.py:36
+msgid "Qayta sms yuborish uchun kuting: {}"
+msgstr ""
+
+#: core/services/user.py:38
+msgid "Serverda xatolik yuz berdi"
+msgstr ""
+
+#: resources/templates/admin/index.html:13
+msgid "Django site admin"
+msgstr ""
+
+#: resources/templates/admin/index.html:19
+msgid "Django administration"
+msgstr ""
+
+#: resources/templates/user/home.html:21
 msgid "Django"
 msgstr ""
 
-#: resources/templates/user/home.html:19
+#: resources/templates/user/home.html:22
 msgid "Assalomu aleykum"
 msgstr ""
-
-#~ msgid "Home"
-#~ msgstr "Bosh sahifa"
 
 #~ msgid "Homes"
 #~ msgstr "Bosh sahifa"

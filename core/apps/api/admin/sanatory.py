@@ -19,7 +19,7 @@ class VideoInline(TabularInline):
             return format_html(
                 '<video width="200" height="120" controls>'
                 '<source src="{}" type="video/mp4">'
-                "Sizning brauzeringiz videoni ko‘rsata olmaydi."
+                "Sizning brauzeringiz videoni ko'rsata olmaydi."
                 "</video>",
                 obj.video.url,
             )
@@ -31,7 +31,8 @@ class VideoInline(TabularInline):
 class SanatoryAdmin(ModelAdmin, TabbedTranslationAdmin):
     list_display = ("id", "__str__", "image_preview")
     inlines = [VideoInline]
-    prepopulated_fields = {"slug": ("title",)}  # title asosida slug avto hosil bo‘ladi
+    prepopulated_fields = {"slug": ("title",)}
+    search_fields = ("title",)  # autocomplete uchun zarur
 
     def image_preview(self, obj):
         if obj.image:
@@ -49,7 +50,7 @@ class VideoAdmin(ModelAdmin):
             return format_html(
                 '<video width="120" height="80" controls>'
                 '<source src="{}" type="video/mp4">'
-                "Sizning brauzeringiz videoni ko‘rsata olmaydi."
+                "Sizning brauzeringiz videoni ko'rsata olmaydi."
                 "</video>",
                 obj.video.url,
             )

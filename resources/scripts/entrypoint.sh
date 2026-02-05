@@ -1,6 +1,6 @@
 #!/bin/bash
 
-while ! nc -z travel-db-594m6d 5432; do
+while ! nc -z db 5432; do
   sleep 2
   echo "Waiting postgress...."
 done

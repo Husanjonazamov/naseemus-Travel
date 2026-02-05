@@ -3,8 +3,7 @@ from django.utils.html import format_html
 from unfold.admin import ModelAdmin, TabularInline
 from modeltranslation.admin import TabbedTranslationAdmin
 
-from core.apps.api.models import TourModel, TourimageModel
-
+from core.apps.api.models import TourModel, TourimageModel, SanatoryModel
 
 
 
@@ -31,6 +30,10 @@ class TourAdmin(ModelAdmin, TabbedTranslationAdmin):
     list_display_links = ("id", "title")
     search_fields = ("title", "description")
     list_filter = ("is_popular", "is_new", "date")
+    
+    # Sanatoriyalarni tanlash uchun
+    autocomplete_fields = ["sanatories"]
+    filter_horizontal = ("sanatories",)
 
     def image_tag(self, obj):
         if obj.image:
@@ -50,3 +53,4 @@ class TourAdmin(ModelAdmin, TabbedTranslationAdmin):
     price_display.short_description = "Price"
     
     inlines = [TourImageInlines]
+

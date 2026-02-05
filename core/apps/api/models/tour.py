@@ -15,6 +15,12 @@ class TourModel(AbstractBaseModel):
     date = models.IntegerField(verbose_name=_("Kun"), blank=True, null=True)
     is_popular = models.BooleanField(verbose_name=_("Mashhurmi ?"), default=False)
     is_new = models.BooleanField(verbose_name=_("Yangi ?"), default=True)
+    sanatories = models.ManyToManyField(
+        "api.SanatoryModel",
+        verbose_name=_("Sanatoriyalar"),
+        related_name="tours",
+        blank=True
+    )
     
     def __str__(self):
         return self.title

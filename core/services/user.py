@@ -17,16 +17,17 @@ class UserService(sms.SmsService):
             "access": str(refresh.access_token),
         }
 
-    def create_user(self, phone, first_name, last_name, password):
-        get_user_model().objects.update_or_create(
-            phone=phone,
+    def create_user(self, email, first_name, password):
+        user, created = get_user_model().objects.update_or_create(
+            email=email,
             defaults={
-                "phone": phone,
+                "email": email,
                 "first_name": first_name,
-                "last_name": last_name,
                 "password": hashers.make_password(password),
+                "validated_at": datetime.now(),
             },
         )
+        return user
 
     def send_confirmation(self, phone) -> bool:
         try:
@@ -55,10 +56,12 @@ class UserService(sms.SmsService):
             return True
         return False
 
-    def change_password(self, phone, password):
+    def change_user_password(self, email, password):
         """
         Change password
         """
-        user = get_user_model().objects.filter(phone=phone).first()
-        user.set_password(password)
-        user.save()
+        user = get_user_model().objects.filter(email=email).first()
+        if user:
+            user.set_password(password)
+            user.save()
+
